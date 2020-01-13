@@ -1,4 +1,4 @@
-<h1 style="text-align: center;">Restaurant Management Software and Point of Sale</h1>
+<h1 style="text-align: center;">Restaurant Management and Point of Sale System</h1>
 <p>This is an implementation of a management software for restaurants. The system provides tools to set and track menu items prices, record staff check in and check out times, automatically or manually order supplies from distributors, and a lot more.</p>
 <p>&nbsp;</p>
 <h2>Features:</h2>

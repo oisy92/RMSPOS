@@ -14,6 +14,8 @@
 #include <ctime>
 #include <algorithm>
 #include <chrono>
+#include <cliext/vector>
+#include <msclr\marshal_cppstd.h>
 
 using namespace std;
 

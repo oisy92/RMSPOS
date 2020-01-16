@@ -1,5 +1,12 @@
-#include "Main.h"
 #include "pch.h"
+#include "Main.h"
+#include "Admin.h"
+#include "Waiter.h"
+#include "Table.h"
+#include "Drink.h"
+#include "Entree.h"
+#include "Mains.h"
+#include "Dessert.h"
 
 vector<Admin> Admin::adminsVector;
 vector<Waiter> Waiter::waitersVector;

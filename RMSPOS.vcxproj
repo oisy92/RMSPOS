@@ -146,6 +146,7 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Staff.h" />
+    <ClInclude Include="Table.h" />
     <ClInclude Include="Waiter.h" />
   </ItemGroup>
   <ItemGroup>
@@ -165,6 +166,7 @@
     </ClCompile>
     <ClCompile Include="RMSPOS.cpp" />
     <ClCompile Include="Staff.cpp" />
+    <ClCompile Include="Table.cpp" />
     <ClCompile Include="Waiter.cpp" />
   </ItemGroup>
   <ItemGroup>

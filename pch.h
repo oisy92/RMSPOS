@@ -8,6 +8,8 @@
 #define PCH_H
 
 // add headers that you want to pre-compile here
+#include <stdio.h> 
+#include <time.h>
 #include <string>
 #include <iostream>
 #include <vector>
@@ -16,6 +18,8 @@
 #include <chrono>
 #include <cliext/vector>
 #include <msclr\marshal_cppstd.h>
+#include <iomanip>
+
 
 using namespace std;
 

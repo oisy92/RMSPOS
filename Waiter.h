@@ -5,5 +5,9 @@ class Waiter : public Staff
 public:
 	Waiter(string newFirstName, string newLastName, int newSalary, int newAge, string newGender, string newAddress, string newEmploymentType);
 	static vector<Waiter> waitersVector;
+	static vector<Waiter>clockedinWaiters;
+protected:
+	const bool isWaiter = true;
+
 };
 

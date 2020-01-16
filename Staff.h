@@ -13,14 +13,6 @@ public:
 	string getLastName();
 	string getInitials();
 	string generateID();
-	template <typename T>
-	 vector<T> static addToVector(T input) {
-		 static vector<T>clockedinStaff;
-		 clockedinStaff.push_back(input);
-
-		 return clockedinStaff;
-	}
-
 protected:
 	string username;
 	string password;

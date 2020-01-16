@@ -118,6 +118,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="tablesButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAB
+        5AAAAeQB+hcYWwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJNSURBVHhe7Zgx
+        axRRFIUnhZIyjZVga35GQmYEQTSFSWa7VIJ1SKew1eykE2ztJBAIgoWF2MRkllS2VpvZlIsgiEUmKwTG
+        d5ZsvO9xAjYDO3tv8cHOmfPeu+ewDLMb1XWtGipqgoqaoKImqKgJKmqCipqgoiaoeCtH24tV0dmpijSf
+        TTo7mJHOfgtUZFz2N1erk3TgDqpnGjcjZmUZGFSU/DraXroo0nf0sBkGM2N2lklCxSmuzedus1G4eYsY
+        IQPLNoWK1enG/aqffiQbthNkcZlY1kCIFi5Otl66r89vulGLQSZkQ0aZ+ebDn9POsjMW4cI5pEDWfwV8
+        e3Hnsp++djfGgXGeGSMzskej908Of35Y/6oRZI/OenGtGSuAiZqwApioCSuAiZqIzrNHy1N+7D+Lq+Ot
+        4TyDjDLzzauweB1mb05zg3wNBlaAvFBfwHBv9aF7MIwlZR5/mvzPJijz5AseIFOGe8nb0NM0OFPOgJlC
+        D2Z397w8yCgzewXgoYDNPLL4s/QAaL5v7U3oaRqc6c3wX3PGNTJKj7fACrACrAArIFxgBVgBVoAVID3A
+        6QfSM+jF3dDTNDhTzuA4CD2NFXDeXVk6y+NX10Psfu9u3A09TYMzcfZkBjcLZgo9jRXQFqwAK8AKsALC
+        PFaAFWAFWAHS4y2wAqwAK8AKCBeoKqDM4wfOdCUXlHlyKD1tArPLLI4rZJQebwEYZMlT9xs7B2UvyQbZ
+        43uhpy1g9kmG6zzIFnq8C41QURNU1AQVNUFFTVBRE1TUBBX1UEd/AdeGCSPBgOiKAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="adminButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAB
@@ -795,7 +811,7 @@
         AAAASUVORK5CYII=
 </value>
   </data>
-  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="addNewTableButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAB
         5AAAAeQB+hcYWwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJNSURBVHhe7Zgx
@@ -1024,4 +1040,10 @@
         rkJggg==
 </value>
   </data>
+  <metadata name="CurrentTimeTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
 </root>

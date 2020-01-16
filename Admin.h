@@ -8,4 +8,8 @@ public:
 	Admin(string newFirstName, string newLastName, int newSalary, int newAge, string newGender, string newAddress, string newEmploymentType);
 	static vector<Admin> adminsVector;
 
+protected:
+	const bool isAdmin = true;
+	static vector<Admin>clockedinAdmins;
+
 };

@@ -48,6 +48,7 @@
 <li>Develop menu item price modification implementation.</li>
 <li>Develop binding database to record data in case of software shutdown.</li>
 <li>Develop Super Admin dashboard.</li>
+<li>Restructure project files into folders [src, headers, resources, images].</li>
 </ol>
 <p>The following items are not required, but would be great to have it included in the system:</p>
 <ol>

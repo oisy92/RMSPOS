@@ -17,7 +17,7 @@
 <p align="center"><img src="https://raw.githubusercontent.com/oisy92/RMSPOS/master/Images/Admin%20Dashboard.png" width="900" /></p>
 <p>The system records staff clock in and clock out times in an external database, allowing super admins to view the amount of hours worked, and expect pay. Furthermore, the system keeps count of on-shift staff by showing the number of clocked in staff at the footer.</p>
 <p align="center"><img src="https://github.com/oisy92/RMSPOS/blob/master/Images/Staff%20Clock%20In%20Confirmation.png?raw=true" width="200" /></p>
-<p style="text-align: left;" align="center">The system includes 4 menu categories:</p>
+<p style="text-align: left;" >The system includes 4 menu categories:</p>
 <ol>
 <li style="text-align: left;">Drinks</li>
 <li style="text-align: left;">Entrees</li>
@@ -25,7 +25,7 @@
 <li style="text-align: left;">Desserts</li>
 </ol>
 <p>Only admins and super admins have the <span id="osc_tag_system_11" class="osc_tag_system osc_error_green">privilege</span> of adding items to the categories, and only clocked in staff have the privilege of ordering menu items to tables.</p>
-<p align="center"><img src="https://github.com/oisy92/RMSPOS/blob/master/Images/Menus.jpg?raw=true" width="700" /></p>
+<p align="center"><img src="https://github.com/oisy92/RMSPOS/blob/master/Images/Menus.jpg?raw=true" width="900" /></p>
 <h2>Features:</h2>
 <ol>
 <li>Table ordering: You can assign orders to tables from the software's simple user interface.</li>

@@ -25,7 +25,10 @@
 <li style="text-align: left;">Desserts</li>
 </ol>
 <p>Only admins and super admins have the <span id="osc_tag_system_11" class="osc_tag_system osc_error_green">privilege</span> of adding items to the categories, and only clocked in staff have the privilege of ordering menu items to tables.</p>
-<p align="center"><img src="https://github.com/oisy92/RMSPOS/blob/master/Images/Menus.jpg?raw=true" width="900" /></p>
+<p align="center"><img src="https://github.com/oisy92/RMSPOS/blob/master/Images/Drinks%20Menu.png?raw=true" width="900" /></p>
+<p align="center"><img src="https://github.com/oisy92/RMSPOS/blob/master/Images/Entree%20Menu.png?raw=true" width="900" /></p>
+<p align="center"><img src="https://github.com/oisy92/RMSPOS/blob/master/Images/Mains%20Menu.png?raw=true" width="900" /></p>
+<p align="center"><img src="https://github.com/oisy92/RMSPOS/blob/master/Images/Desserts%20Menu.png?raw=true" width="900" /></p>
 <h2>Features:</h2>
 <ol>
 <li>Table ordering: You can assign orders to tables from the software's simple user interface.</li>

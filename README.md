@@ -61,7 +61,7 @@
 </ol>
 <h2>How To Build:</h2>
 <ol>
-<li>Open the project by clicking `RMSPOS.sln`.</li>
+<li>Open the project by clicking <code>RMSPOS.sln</code>.</li>
 <li>Build the project.</li>
-<li>Navigate to `\x64\Debug` and run the exeutable `RMSPOS.exe`.</li>
+  <li>Navigate to <code>\x64\Debug</code> and run the exeutable <code>RMSPOS.exe</code>.</li>
 </ol>

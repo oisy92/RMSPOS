@@ -53,7 +53,7 @@
 </ol>
 <h2>Prerequisites:</h2>
 <ol>
-<li>Visual Studio&nbsp;2019.</li>
+<li>C++ environment (Preferably VS2019)</li>
 <li>Common Language Support.</li>
 </ol>
 <h2>How To Build:</h2>

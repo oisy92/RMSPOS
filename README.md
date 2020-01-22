@@ -17,7 +17,7 @@
 <p align="center"><img src="https://raw.githubusercontent.com/oisy92/RMSPOS/master/Images/Admin%20Dashboard.png" width="900" /></p>
 <p>The system records staff clock in and clock out times in an external database, allowing super admins to view the amount of hours worked, and expect pay. Furthermore, the system keeps count of on-shift staff by showing the number of clocked in staff at the footer.</p>
 <p align="center"><img src="https://github.com/oisy92/RMSPOS/blob/master/Images/Staff%20Clock%20In%20Confirmation.png?raw=true" width="200" /></p>
-<p style="text-align: left;" >The system includes 4 menu categories:</p>
+<p style="text-align: left;">The system includes 4 menu categories:</p>
 <ol>
 <li style="text-align: left;">Drinks</li>
 <li style="text-align: left;">Entrees</li>
@@ -32,23 +32,39 @@
 <h2>Features:</h2>
 <ol>
 <li>Table ordering: You can assign orders to tables from the software's simple user interface.</li>
-<li>Tables customizing: You can customize the table layout in the software to accurately</li>
-<li>resemble the actual layout of your restaurant, so it can be less confusing to your staff.</li>
+<li>Tables customizing: You can customize the table layout in the software to accurately resemble the actual layout of your restaurant, so it can be less confusing to your staff.</li>
 <li>POS: You can use the software to process transactions.</li>
 <li>Staff check in/check out: Your staff can securely log in and log out to record their check in and check out times. Allowing you to monitor their working times and breaks.</li>
 <li>Order supplies: You can use the software to register suppliers and contact them through E-mail to order supplies.</li>
 </ol>
 <h2>Planned Development:</h2>
+<p>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/correct.png?raw=true" />] = Completed. [<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/minus.png?raw=true" />] = In progress. [<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />] = Not started.</p>
 <p>This list will be <span id="osc_tag_system_13" class="osc_tag_system osc_error_green">continuously</span> edited to keep track of project progress.</p>
 <ol>
-<li>Develop Clock off implementation.</li>
-<li>Develop supply ordering implemenetion.</li>
-<li>Create email field for new staff and admins, and send their credentials to their emails.</li>
-<li>Develop POS system.</li>
-<li>Develop menu item price modification implementation.</li>
-<li>Develop binding database to record data in case of software shutdown.</li>
-<li>Develop Super Admin dashboard.</li>
-<li>Restructure project files into folders [src, headers, resources, images].</li>
+<li>
+<p>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/correct.png?raw=true" />] Develop Clock off implementation.</p>
+</li>
+<li>
+<p>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />] Develop supply ordering implemenetion.</p>
+</li>
+<li>
+<p>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />] Create email field for new staff and admins, and send their credentials to their emails.</p>
+</li>
+<li>
+<p>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/minus.png?raw=true" />] Develop POS system.</p>
+</li>
+<li>
+<p>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />] Develop menu item price modification tool.</p>
+</li>
+<li>
+<p>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />] Develop binding database to record data in case of software shutdown.</p>
+</li>
+<li>
+<p>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />] Develop Super Admin dashboard.</p>
+</li>
+<li>
+<p>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />] Restructure project files into folders [src, headers, resources, images].</p>
+</li>
 </ol>
 <p>The following items are not required, but would be great to have it included in the system:</p>
 <ol>
@@ -64,5 +80,5 @@
 <ol>
 <li>Open the project by clicking <code>RMSPOS.sln</code>.</li>
 <li>Build the project.</li>
-  <li>Navigate to <code>\x64\Debug</code> and run the exeutable <code>RMSPOS.exe</code>.</li>
+<li>Navigate to <code>\x64\Debug</code> and run the exeutable <code>RMSPOS.exe</code>.</li>
 </ol>

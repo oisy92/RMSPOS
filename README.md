@@ -3,7 +3,7 @@
 <p>This is an implementation of a restaurant/bar management and Point of Sale system. The system provides tools to set and track menu items prices, order items and assign orders to tables, record staff check in and check out times, automatically or manually order supplies from distributors, monitor tables vaccancies, and staff availabilites.</p>
 <p>The system provides a side panel to allow easy navigation through different sections. The side panel consists of explanatory images rather than texts to be easily understandable despite someone's language.</p>
 <p align="center"><img src="https://github.com/oisy92/RMSPOS/blob/master/Images/Dashboard%20Explanation.jpg?raw=true" width="300" /></p>
-<p style="text-align: left;" align="center">The system allows admins to customize tables positions so the table layout can accurately resemble the restaurant's actual layout, making it less confusing for waiters to identify tables. Furthermore, the system detects vacant and non vacant tables by coloring them green and red respectively. Hence, staff can quickly find tables for coming diners.&nbsp;</p>
+<p style="text-align: left;" align="center">The system allows admins to customize tables positions so the table layout can accurately resemble the restaurant's actual layout, making it less confusing for waiters to identify tables. Furthermore, the system detects vacant and non vacant tables by coloring them green and red respectively. Hence, staff can quickly find tables for incoming diners.&nbsp;</p>
 <p align="center"><img src="https://github.com/oisy92/RMSPOS/blob/master/Images/Tables%20Layout.png?raw=true" width="900" /></p>
 <p>The system includes a secured admins and super admins dashboards. Super Admins have the priviliges of:</p>
 <ol>
@@ -25,7 +25,10 @@
 <li style="text-align: left;">Desserts</li>
 </ol>
 <p>Only admins and super admins have the <span id="osc_tag_system_11" class="osc_tag_system osc_error_green">privilege</span> of adding items to the categories, and only clocked in staff have the privilege of ordering menu items to tables.</p>
-<p align="center"><img src="https://github.com/oisy92/RMSPOS/blob/master/Images/Menus.jpg?raw=true" width="900" /></p>
+<p align="center"><img src="https://github.com/oisy92/RMSPOS/blob/master/Images/Drinks%20Menu.png?raw=true" width="900" /></p>
+<p align="center"><img src="https://github.com/oisy92/RMSPOS/blob/master/Images/Entree%20Menu.png?raw=true" width="900" /></p>
+<p align="center"><img src="https://github.com/oisy92/RMSPOS/blob/master/Images/Mains%20Menu.png?raw=true" width="900" /></p>
+<p align="center"><img src="https://github.com/oisy92/RMSPOS/blob/master/Images/Desserts%20Menu.png?raw=true" width="900" /></p>
 <h2>Features:</h2>
 <ol>
 <li>Table ordering: You can assign orders to tables from the software's simple user interface.</li>
@@ -45,6 +48,7 @@
 <li>Develop menu item price modification implementation.</li>
 <li>Develop binding database to record data in case of software shutdown.</li>
 <li>Develop Super Admin dashboard.</li>
+<li>Restructure project files into folders [src, headers, resources, images].</li>
 </ol>
 <p>The following items are not required, but would be great to have it included in the system:</p>
 <ol>
@@ -58,7 +62,7 @@
 </ol>
 <h2>How To Build:</h2>
 <ol>
-<li>Open the project by clicking `RMSPOS.sln`.</li>
+<li>Open the project by clicking <code>RMSPOS.sln</code>.</li>
 <li>Build the project.</li>
-<li>Navigate to `\x64\Debug` and run the exeutable `RMSPOS.exe`.</li>
+  <li>Navigate to <code>\x64\Debug</code> and run the exeutable <code>RMSPOS.exe</code>.</li>
 </ol>

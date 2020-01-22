@@ -40,7 +40,7 @@
 <h2>Planned Development:</h2>
 <p>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/correct.png?raw=true" />] = Completed. [<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/minus.png?raw=true" />] = In progress. [<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />] = Not started.</p>
 <p>This list will be <span id="osc_tag_system_13" class="osc_tag_system osc_error_green">continuously</span> edited to keep track of project progress.</p>
-<h4>Current Queue</h4>
+<h4>Queue</h4>
 <ol>
 <li>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/correct.png?raw=true" />] Develop drinks menu.</li>
 <li>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/correct.png?raw=true" />] Develop entrees menu.</li>
@@ -61,7 +61,6 @@
 <li>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />] Develop menu item price modification tool.</li>
 <li>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />] Develop binding database to record data in case of software shutdown.</li>
 <li>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />] Develop Super Admin dashboard.</li>
-<li></li>
 </ol>
 <h4>Backlog</h4>
 <ol>
@@ -70,7 +69,7 @@
 <li>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />] Organize code.</li>
 <li>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />] Create unit test code.</li>
 </ol>
-<p>Extra</p>
+<h4>Extra</h4>
 <ol>
 <li>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />]Staff shifts scheduling.</li>
 <li>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />]Connect system to Arduino board to simulate POS drawer opening/closing.</li>

@@ -19,6 +19,7 @@
 #include <cliext/vector>
 #include <msclr\marshal_cppstd.h>
 #include <iomanip>
+#include<numeric>
 
 
 using namespace std;

@@ -6,6 +6,7 @@
 #include "Mains.h"
 #include "Table.h"
 #include "Waiter.h"
+#include "Functions.h"
 #include "pch.h"
 
 namespace RMSPOS {
@@ -17,7 +18,7 @@ using namespace System::Windows::Forms;
 using namespace System::Data;
 using namespace System::Drawing;
 using namespace msclr::interop;
-
+class Menu;
 ref class Main : public System::Windows::Forms::Form {
 public:
   Main(void);
@@ -28,20 +29,6 @@ public:
 
 private:
   System::Windows::Forms::Panel ^ sidePanel;
-
-  System::Windows::Forms::Button ^ adminButton;
-
-  System::Windows::Forms::Button ^ clockButton;
-
-  System::Windows::Forms::Button ^ dessertButton;
-
-  System::Windows::Forms::Button ^ mainButton;
-
-  System::Windows::Forms::Button ^ entreeButton;
-
-  System::Windows::Forms::Button ^ drinkButton;
-
-  System::Windows::Forms::Panel ^ footerPanel;
 
   System::Windows::Forms::Panel ^ headerPanel;
 
@@ -180,38 +167,18 @@ private:
   System::Windows::Forms::Label ^ clockinFailedLabel;
 
 private:
-  System::Windows::Forms::Label ^ headerLabel;
-
 private:
-  System::Windows::Forms::Label ^ footerTimeLabel;
-
 private:
-  System::Windows::Forms::Label ^ footerStafflabel;
-
 private:
-  System::Windows::Forms::Label ^ footerDatelabel;
-
 private:
-  System::Windows::Forms::Label ^ footerVacantTableslabel;
-
 private:
   System::Windows::Forms::Timer ^ CurrentTimeTimer;
 
 private:
-  System::Windows::Forms::Label ^ footerTimeValueLabel;
-
 private:
-  System::Windows::Forms::Label ^ footerDateValueLabel;
-
 private:
-  System::Windows::Forms::Label ^ footerStaffValueLabel;
-
 private:
-  System::Windows::Forms::Button ^ tablesButton;
-
 private:
-  System::Windows::Forms::Label ^ label1;
-
 private:
   System::Windows::Forms::Panel ^ tablesLayoutPanel;
 
@@ -226,6 +193,138 @@ private:
 
 private:
   System::Windows::Forms::RichTextBox ^ tablesSeatsrichTextBox;
+
+private:
+  System::Windows::Forms::Label ^ headerNavigationLabel;
+
+private:
+  System::Windows::Forms::TableLayoutPanel ^ tableLayoutPanel1;
+
+private:
+  System::Windows::Forms::Label ^ footerTimeLabel;
+
+private:
+  System::Windows::Forms::Label ^ footerTimeValueLabel;
+
+private:
+  System::Windows::Forms::Label ^ footerDateValueLabel;
+
+private:
+  System::Windows::Forms::Label ^ footerDatelabel;
+
+private:
+  System::Windows::Forms::Label ^ footerVacantTablesValueLabel;
+
+private:
+  System::Windows::Forms::Label ^ footerVacantTableslabel;
+
+private:
+  System::Windows::Forms::Label ^ footerStaffValueLabel;
+
+private:
+  System::Windows::Forms::Label ^ footerStafflabel;
+
+private:
+  System::Windows::Forms::Panel ^ statusPanel;
+
+private:
+  System::Windows::Forms::Label ^ statusLabel;
+
+private:
+  System::Windows::Forms::Panel ^ footerPanel;
+
+private:
+  System::Windows::Forms::Panel ^ sidePanelHeaderPanel;
+
+private:
+  System::Windows::Forms::Label ^ headerSoftwareNameLabel;
+
+private:
+  System::Windows::Forms::Panel ^ orderPanel;
+
+private:
+  System::Windows::Forms::TableLayoutPanel ^ orderLayoutPanel;
+
+private:
+  System::Windows::Forms::Button ^ confirmOrderLayoutPanelTableLabel;
+
+private:
+  System::Windows::Forms::Panel ^ navigationPanel;
+
+private:
+  System::Windows::Forms::Button ^ tablesButton;
+
+private:
+  System::Windows::Forms::Button ^ adminButton;
+
+private:
+  System::Windows::Forms::Button ^ clockButton;
+
+private:
+  System::Windows::Forms::Button ^ dessertButton;
+
+private:
+  System::Windows::Forms::Button ^ mainButton;
+
+private:
+  System::Windows::Forms::Button ^ entreeButton;
+
+private:
+  System::Windows::Forms::Button ^ drinkButton;
+
+private:
+  System::Windows::Forms::TableLayoutPanel ^ orderPanelFooter;
+
+private:
+  System::Windows::Forms::Label ^ orderPanelFooterTotalInt;
+
+private:
+  System::Windows::Forms::Label ^ orderPanelFooterT;
+
+private:
+  System::Windows::Forms::Button ^ clearOrderLayoutPanelTableLabel;
+
+private:
+  System::Windows::Forms::TableLayoutPanel ^ orderPanelFooterTotalString;
+
+private:
+  System::Windows::Forms::Label ^ label2;
+
+private:
+  System::Windows::Forms::Label ^ label1;
+
+private:
+  System::Windows::Forms::Button ^ eatinOrderLayoutPanelTableLabel;
+
+private:
+  System::Windows::Forms::Button ^ eatoutOrderLayoutPanelTableLabel;
+
+private:
+  System::Windows::Forms::Panel ^ viewOrderPanel;
+
+private:
+  System::Windows::Forms::TableLayoutPanel ^ tableLayoutPanel2;
+
+private:
+  System::Windows::Forms::Label ^ tableOrderItemPrice;
+
+private:
+  System::Windows::Forms::Label ^ tableOrderItemName;
+
+private:
+  System::Windows::Forms::TableLayoutPanel ^ tableLayoutPanel3;
+
+private:
+  System::Windows::Forms::Label ^ tableOrderTotalPrice;
+
+private:
+  System::Windows::Forms::Label ^ tableOrderTotalName;
+
+private:
+  System::Windows::Forms::TableLayoutPanel ^ tableOrderLayoutPanel;
+
+private:
+  System::Windows::Forms::Button ^ tableOrderPayButton;
 
 private:
   System::ComponentModel::IContainer ^ components;
@@ -273,23 +372,28 @@ private:
   System::Void clockinButton_Click(System::Object ^ sender,
                                    System::EventArgs ^ e);
 
-private:
   System::Void timer1_Tick(System::Object ^ sender, System::EventArgs ^ e);
 
-private:
   System::Void addNewTableButton_Click(System::Object ^ sender,
                                        System::EventArgs ^ e);
 
-private:
   System::Void createNewTableButton_Click(System::Object ^ sender,
                                           System::EventArgs ^ e);
 
-private:
   System::Void tablesButton_Click(System::Object ^ sender,
                                   System::EventArgs ^ e);
 
-private:
   System::Void addTables(System::Object ^ sender,
                          System::Windows::Forms::MouseEventArgs ^ e);
+
+  System::Void menuItem_Clicked(System::Object ^ sender, System::EventArgs ^ e);
+
+  System::Void confirmOrderLayoutPanelTableLabel_Click(System::Object ^ sender,
+                                                       System::EventArgs ^ e);
+  System::Void eatinOrderLayoutPanelTableLabel_Click(System::Object ^ sender,
+                                                     System::EventArgs ^ e);
+  System::Void table_Click(System::Object ^ sender, System::EventArgs ^ e);
+  System::Void clockOutbutton_Click(System::Object ^ sender,
+                                    System::EventArgs ^ e);
 };
 } // namespace RMSPOS

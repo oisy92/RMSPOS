@@ -40,36 +40,40 @@
 <h2>Planned Development:</h2>
 <p>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/correct.png?raw=true" />] = Completed. [<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/minus.png?raw=true" />] = In progress. [<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />] = Not started.</p>
 <p>This list will be <span id="osc_tag_system_13" class="osc_tag_system osc_error_green">continuously</span> edited to keep track of project progress.</p>
+<h4>Current Queue</h4>
 <ol>
-<li>
-<p>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/correct.png?raw=true" />] Develop Clock off implementation.</p>
-</li>
-<li>
-<p>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />] Develop supply ordering implemenetion.</p>
-</li>
-<li>
-<p>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />] Create email field for new staff and admins, and send their credentials to their emails.</p>
-</li>
-<li>
-<p>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/minus.png?raw=true" />] Develop POS system.</p>
-</li>
-<li>
-<p>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />] Develop menu item price modification tool.</p>
-</li>
-<li>
-<p>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />] Develop binding database to record data in case of software shutdown.</p>
-</li>
-<li>
-<p>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />] Develop Super Admin dashboard.</p>
-</li>
-<li>
-<p>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />] Restructure project files into folders [src, headers, resources, images].</p>
-</li>
+<li>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/correct.png?raw=true" />] Develop drinks menu.</li>
+<li>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/correct.png?raw=true" />] Develop entrees menu.</li>
+<li>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/correct.png?raw=true" />] Develop mains menu.</li>
+<li>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/correct.png?raw=true" />] Develop desserts menu.</li>
+<li>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/correct.png?raw=true" />] Develop menu item creation tool.</li>
+<li>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/correct.png?raw=true" />] Develop admin panel.</li>
+<li>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/correct.png?raw=true" />] Develop admin creation implementation.</li>
+<li>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/correct.png?raw=true" />] Develop staff creation implementation.</li>
+<li>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/correct.png?raw=true" />] Develop staffclock in implementation.</li>
+<li>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/correct.png?raw=true" />] Develop staff clock off implementation.</li>
+<li>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/minus.png?raw=true" />] Develop POS system.</li>
+<li>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />] Develop supplier creation implementation.</li>
+<li>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />] Develop supply panel.</li>
+<li>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />] Develop supply ordering implemenetion.</li>
+<li>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />] Create email field for new staff and admins.</li>
+<li>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />] Develop implementation to send credentials to created new staff/admins emails.</li>
+<li>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />] Develop menu item price modification tool.</li>
+<li>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />] Develop binding database to record data in case of software shutdown.</li>
+<li>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />] Develop Super Admin dashboard.</li>
+<li></li>
 </ol>
-<p>The following items are not required, but would be great to have it included in the system:</p>
+<h4>Backlog</h4>
 <ol>
-<li>Staff shifts scheduling.</li>
-<li>Connect system to Arduino board to simulate POS drawer opening/closing.</li>
+<li>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />] Restructure project files into folders [src, headers, resources, images].</li>
+<li>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />] Add comments to code.</li>
+<li>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />] Organize code.</li>
+<li>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />] Create unit test code.</li>
+</ol>
+<p>Extra</p>
+<ol>
+<li>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />]Staff shifts scheduling.</li>
+<li>[<img src="https://github.com/oisy92/RMSPOS/blob/master/Images/cross.png?raw=true" />]Connect system to Arduino board to simulate POS drawer opening/closing.</li>
 </ol>
 <h2>Prerequisites:</h2>
 <ol>

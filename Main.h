@@ -6,7 +6,6 @@
 #include "Mains.h"
 #include "Table.h"
 #include "Waiter.h"
-#include "Functions.h"
 #include "pch.h"
 
 namespace RMSPOS {

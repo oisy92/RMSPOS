@@ -2,9 +2,9 @@
 #include "pch.h"
 class Menu {
 public:
-  string getName();
-  int getPrice();
-  bool getvisible();
+  string getName() const;
+  int getPrice() const;
+  bool getvisible() const;
   static vector<pair<string, int>> menuVector;
 
 protected:

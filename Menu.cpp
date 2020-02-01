@@ -1,17 +1,17 @@
 #include "pch.h"
 #include "Menu.h"
 
-string Menu::getName()
+string Menu::getName() const
 {
 	return name;
 }
 
-int Menu::getPrice()
+int Menu::getPrice() const
 {
 	return price;
 }
 
-bool Menu::getvisible()
+bool Menu::getvisible() const
 {
 	return visible;
 }

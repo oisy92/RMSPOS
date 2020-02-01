@@ -11,5 +11,5 @@ Waiter::Waiter(string newFirstName, string newLastName, int newSalary, int newAg
 	age = newAge;
 	gender = newGender;
 	address = newAddress;
-	employmenttype = newEmploymentType;
+	employmentType = newEmploymentType;
 }

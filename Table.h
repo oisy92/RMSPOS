@@ -8,7 +8,7 @@ public:
 
   static vector<Table> tablesVector;
   static vector<pair<string, int>> tempTableOrder;
-  string getTableName();
+  string getTableName() const;
 
 private:
   vector<pair<string, int>> tableOrder;

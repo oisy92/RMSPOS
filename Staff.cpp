@@ -7,27 +7,27 @@ void Staff::changeCredentials(string newUsername, string newPassword)
 	password = newPassword;
 }
 
-string Staff::getUsername()
+string Staff::getUsername() const
 {
 	return username;
 }
 
-string Staff::getPassword()
+string Staff::getPassword() const
 {
 	return password;
 }
 
-string Staff::getFirstName()
+string Staff::getFirstName() const 
 {
 	return firstName;
 }
 
-string Staff::getLastName()
+string Staff::getLastName() const
 {
 	return lastName;
 }
 
-string Staff::getInitials()
+string Staff::getInitials() const 
 {
 	string firstInitial(1, firstName[0]);
 	string secondInitial(1, lastName[0]);

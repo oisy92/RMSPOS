@@ -12,4 +12,4 @@ vector<pair<string, int>> Table::getOrder() { return tableOrder; }
 
 void Table::deleteOrder() { tableOrder.clear(); }
 
-string Table::getTableName() { return name; }
+string Table::getTableName() const { return name; }

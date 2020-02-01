@@ -2,6 +2,8 @@
 #include "Admin.h"
 
 Admin::Admin(string newFirstName, string newLastName, int newSalary, int newAge, string newGender, string newAddress, string newEmploymentType)
+
+
 {
 	username = newFirstName;
 	password = newLastName;
@@ -11,5 +13,5 @@ Admin::Admin(string newFirstName, string newLastName, int newSalary, int newAge,
 	age = newAge;
 	gender = newGender;
 	address = newAddress;
-	employmenttype = newEmploymentType;
+	employmentType = newEmploymentType;
 }

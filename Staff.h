@@ -7,11 +7,11 @@ class Staff
 {
 public:
 	void changeCredentials(std::string newUsername, string newPassword);
-	string getUsername();
-	string getPassword();
-	string getFirstName();
-	string getLastName();
-	string getInitials();
+	string getUsername() const;
+	string getPassword() const;
+	string getFirstName() const;
+	string getLastName() const;
+	string getInitials() const;
 	string generateID();
 protected:
 	string username;
@@ -20,7 +20,7 @@ protected:
 	string lastName;
 	string gender;
 	string address;
-	string employmenttype;
+	string employmentType;
 	int salary;
 	int age;
 	int clockin;

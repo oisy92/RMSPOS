@@ -27,7 +27,7 @@ void RMSPOS::Main::hideAll()
 {
     for (int i = 0; i <= Controls->Count - 1; i++)
     {
-        std::string std_itemNamerichTextBox = marshal_as<std::string>(Controls->GetType()->ToString());
+        std::string std_itemNamerichTextBox = toUnmannged(Controls->GetType()->ToString());
         if (Controls[i]->Name->Contains("footer") || Controls[i]->Name->Contains("header") ||
             Controls[i]->Name->Contains("side"))
         {
@@ -2280,8 +2280,8 @@ System::Void RMSPOS::Main::LoginButton_Click(System::Object ^ sender, System::Ev
     {
         string inputUsername = (iter1)->getUsername();
         string inputPassword = (iter1)->getPassword();
-        if ((iter1)->getUsername() == marshal_as<std::string>(adminNumberrichTextBox->Text) &&
-            (iter1)->getPassword() == marshal_as<std::string>(adminPasswordrichTextBox->Text))
+        if ((iter1)->getUsername() == toUnmannged(adminNumberrichTextBox->Text) &&
+            (iter1)->getPassword() == toUnmannged(adminPasswordrichTextBox->Text))
         {
             hideAll();
             adminPanel->Show();
@@ -2313,9 +2313,9 @@ System::Void RMSPOS::Main::addMenuItemButton_Click(System::Object ^ sender, Syst
 System::Void RMSPOS::Main::addDrinkButton_Click(System::Object ^ sender, System::EventArgs ^ e)
 {
 
-    std::string std_itemNamerichTextBox = marshal_as<std::string>(itemNamerichTextBox->Text);
+    std::string std_itemNamerichTextBox = toUnmannged(itemNamerichTextBox->Text);
     int itemPrice = Convert::ToInt32(itemPricerichTextBox->Text);
-    std::string std_itemCategory = marshal_as<std::string>(itemCategory->Text);
+    std::string std_itemCategory = toUnmannged(itemCategory->Text);
     if (std_itemCategory == "Drink")
     {
         Drink newDrink(std_itemNamerichTextBox, itemPrice, true);
@@ -2438,13 +2438,13 @@ System::Void RMSPOS::Main::createnewadminButton_Click(System::Object ^ sender, S
 {
     try
     {
-        std::string std_firstnameAdmin = marshal_as<std::string>(firstnamerichTextBox->Text);
-        std::string std_lastnameAdmin = marshal_as<std::string>(lastnamerichTextBox->Text);
+        std::string std_firstnameAdmin = toUnmannged(firstnamerichTextBox->Text);
+        std::string std_lastnameAdmin = toUnmannged(lastnamerichTextBox->Text);
         int std_salaryAdmin = Convert::ToInt32(salaryrichTextBox->Text);
         int std_ageAdmin = Convert::ToInt32(agerichTextBox->Text);
-        std::string std_genderAdmin = marshal_as<std::string>(genderrichTextBox->Text);
-        std::string std_addressAdmin = marshal_as<std::string>(addressrichTextBox->Text);
-        std::string std_employmenttypeAdmin = marshal_as<std::string>(employmentTypeComboBox->Text);
+        std::string std_genderAdmin = toUnmannged(genderrichTextBox->Text);
+        std::string std_addressAdmin = toUnmannged(addressrichTextBox->Text);
+        std::string std_employmenttypeAdmin = toUnmannged(employmentTypeComboBox->Text);
         Admin newAdmin(std_firstnameAdmin, std_lastnameAdmin, std_salaryAdmin, std_ageAdmin, std_genderAdmin,
                        std_addressAdmin, std_employmenttypeAdmin);
         String ^ newAdminUsername = toManaged(newAdmin.getUsername());
@@ -2482,13 +2482,13 @@ System::Void RMSPOS::Main::waiterCreateNewButton_Click(System::Object ^ sender, 
 
     try
     {
-        std::string std_firstnameWaiter = marshal_as<std::string>(waiterFirstNamerichTextBox->Text);
-        std::string std_lastnameWaiter = marshal_as<std::string>(waiterLastNamerichTextBox->Text);
+        std::string std_firstnameWaiter = toUnmannged(waiterFirstNamerichTextBox->Text);
+        std::string std_lastnameWaiter = toUnmannged(waiterLastNamerichTextBox->Text);
         int std_salaryWaiter = Convert::ToInt32(waiterSalaryrichTextBox->Text);
         int std_ageWaiter = Convert::ToInt32(waiterAgerichTextBox->Text);
-        std::string std_genderWaiter = marshal_as<std::string>(waiterGenderrichTextBox->Text);
-        std::string std_addressWaiter = marshal_as<std::string>(waiterAddressrichTextBox->Text);
-        std::string std_employmenttypeWaiter = marshal_as<std::string>(WaiterEmploymentTypeComboBox->Text);
+        std::string std_genderWaiter = toUnmannged(waiterGenderrichTextBox->Text);
+        std::string std_addressWaiter = toUnmannged(waiterAddressrichTextBox->Text);
+        std::string std_employmenttypeWaiter = toUnmannged(WaiterEmploymentTypeComboBox->Text);
         Waiter newWaiter(std_firstnameWaiter, std_lastnameWaiter, std_salaryWaiter, std_ageWaiter, std_genderWaiter,
                          std_addressWaiter, std_employmenttypeWaiter);
         newWaiter.changeCredentials(newWaiter.getInitials(), newWaiter.generateID());
@@ -2518,8 +2518,8 @@ System::Void RMSPOS::Main::clockinButton_Click(System::Object ^ sender, System::
     bool loginSuccessful = false;
     for (iter1 = Waiter::waitersVector.begin(), end1 = Waiter::waitersVector.end(); iter1 != end1; ++iter1)
     {
-        if (iter1->getUsername() == marshal_as<std::string>(staffnumberrichTextBox->Text) &&
-            marshal_as<std::string>(staffpasswordrichTextBox->Text) == iter1->getPassword())
+        if (iter1->getUsername() == toUnmannged(staffnumberrichTextBox->Text) &&
+            toUnmannged(staffpasswordrichTextBox->Text) == iter1->getPassword())
         {
             String ^ firstName = toManaged((iter1)->getFirstName());
             loginSuccessful = true;
@@ -2624,7 +2624,7 @@ System::Void RMSPOS::Main::menuItem_Clicked(System::Object ^ sender, System::Eve
     vector<pair<string, int>>::iterator iter, end;
     for (iter = Drink::menuVector.begin(), end = Drink::menuVector.end(); iter != end; ++iter)
     {
-        std::string std_firstnameAdmin = marshal_as<std::string>(button->Text);
+        std::string std_firstnameAdmin = toUnmannged(button->Text);
         if ((iter->first) == std_firstnameAdmin)
         {
             Label ^ nameLabel = gcnew Label();
@@ -2698,7 +2698,7 @@ System::Void RMSPOS::Main::table_Click(System::Object ^ sender, System::EventArg
     for (iter = Table::tablesVector.begin(), end = Table::tablesVector.end(); iter != end; ++iter)
     {
         String ^ tableName = toManaged(iter->getTableName());
-        std::string tableNameString = marshal_as<std::string>(button->Text);
+        std::string tableNameString = toUnmannged(button->Text);
         if (button->Text == tableName && Table::tempTableOrder.size() > 0)
         {
             for (iter2 = Table::tempTableOrder.begin(), end2 = Table::tempTableOrder.end(); iter2 != end2; ++iter2)
@@ -2758,7 +2758,7 @@ System::Void RMSPOS::Main::table_Click(System::Object ^ sender, System::EventArg
                 tableOrderLayoutPanel->Controls->Add(*iter4, 0, itemNameVectorCounter++);
                 Label ^ testLabel = gcnew Label;
                 testLabel = iter4->get();
-                std::string dsdsa = marshal_as<std::string>(testLabel->Text);
+                std::string dsdsa = toUnmannged(testLabel->Text);
             }
             int itemPriceVectorCounter = 0;
             for (iter5 = itemNameVector.begin(), end5 = itemNameVector.end(); iter5 != end5; ++iter5)
@@ -2783,8 +2783,8 @@ System::Void RMSPOS::Main::clockOutbutton_Click(System::Object ^ sender, System:
         {
             counter++;
             int index = std::distance(Waiter::clockedinWaiters.begin(), iter1);
-            if (iter1->getUsername() == marshal_as<std::string>(staffnumberrichTextBox->Text) &&
-                marshal_as<std::string>(staffpasswordrichTextBox->Text) == iter1->getPassword())
+            if (iter1->getUsername() == toUnmannged(staffnumberrichTextBox->Text) &&
+                toUnmannged(staffpasswordrichTextBox->Text) == iter1->getPassword())
             {
                 String ^ firstName = toManaged((iter1)->getFirstName());
                 loginSuccessful = true;

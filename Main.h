@@ -376,5 +376,8 @@ ref class Main : public System::Windows::Forms::Form
     System::Void eatinOrderLayoutPanelTableLabel_Click(System::Object ^ sender, System::EventArgs ^ e);
     System::Void table_Click(System::Object ^ sender, System::EventArgs ^ e);
     System::Void clockOutbutton_Click(System::Object ^ sender, System::EventArgs ^ e);
+
+  private:
+    System::Void tableOrderPayButton_Click(System::Object ^ sender, System::EventArgs ^ e);
 };
 } // namespace RMSPOS

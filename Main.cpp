@@ -15,6 +15,7 @@ vector<Waiter> Waiter::clockedinWaiters;
 vector<Table> Table::tablesVector;
 vector<pair<string, int>> Menu::menuVector;
 vector<pair<string, int>> Table::tempTableOrder;
+string Table::activeTable;
 using namespace System;
 
 RMSPOS::Main::Main(void)
@@ -358,6 +359,7 @@ void RMSPOS::Main::InitializeComponent(void)
     this->tableOrderLayoutPanel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(
         ((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom) |
          System::Windows::Forms::AnchorStyles::Left));
+    this->tableOrderLayoutPanel->AutoScroll = true;
     this->tableOrderLayoutPanel->BackColor =
         System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)),
                                          static_cast<System::Int32>(static_cast<System::Byte>(19)),
@@ -388,6 +390,7 @@ void RMSPOS::Main::InitializeComponent(void)
     this->tableOrderPayButton->TabIndex = 10;
     this->tableOrderPayButton->Text = L"Pay";
     this->tableOrderPayButton->UseVisualStyleBackColor = true;
+    this->tableOrderPayButton->Click += gcnew System::EventHandler(this, &Main::tableOrderPayButton_Click);
     //
     // orderPanel
     //
@@ -558,6 +561,7 @@ void RMSPOS::Main::InitializeComponent(void)
     this->orderLayoutPanel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(
         ((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom) |
          System::Windows::Forms::AnchorStyles::Left));
+    this->orderLayoutPanel->AutoScroll = true;
     this->orderLayoutPanel->BackColor =
         System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(40)),
                                          static_cast<System::Int32>(static_cast<System::Byte>(19)),
@@ -2583,6 +2587,7 @@ System::Void RMSPOS::Main::addTables(System::Object ^ sender, System::Windows::F
             Table newTable(newTableName);
             Table::tablesVector.push_back(newTable);
             Button ^ newButton = gcnew Button();
+            newButton->Name = toManaged("Table " + to_string(tableNumber));
             newButton->Font =
                 (gcnew System::Drawing::Font(L"Arial Narrow", 14.25F, System::Drawing::FontStyle::Bold,
                                              System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
@@ -2655,8 +2660,6 @@ System::Void RMSPOS::Main::menuItem_Clicked(System::Object ^ sender, System::Eve
             priceLabel->TabIndex = 0;
             priceLabel->Text = Convert::ToString(iter->second);
             priceLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-            orderLayoutPanel->RowStyles->Add(
-                (gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute, 40)));
             orderLayoutPanel->Controls->Add(nameLabel, 0, orderLayoutPanel->RowCount);
             orderLayoutPanel->Controls->Add(priceLabel, 1, orderLayoutPanel->RowCount);
             orderLayoutPanel->RowCount++;
@@ -2688,84 +2691,69 @@ System::Void RMSPOS::Main::eatinOrderLayoutPanelTableLabel_Click(System::Object 
 System::Void RMSPOS::Main::table_Click(System::Object ^ sender, System::EventArgs ^ e)
 {
     Button ^ button = (Button ^) sender;
+    Table::activeTable = toUnmannged(button->Text);
     orderPanel->Visible = false;
     viewOrderPanel->Visible = true;
-    vector<Table>::iterator iter, end;
-    vector<pair<string, int>>::iterator iter2, end2;
-    vector<pair<string, int>>::iterator iter3, end3;
-    vector<std::reference_wrapper<Label ^>>::iterator iter4, end4, iter5, end5;
+    vector<Table>::iterator iter1, end1;
+    vector<pair<string, int>>::iterator iter2, end2, iter3, end3;
     tableOrderLayoutPanel->Controls->Clear();
-    for (iter = Table::tablesVector.begin(), end = Table::tablesVector.end(); iter != end; ++iter)
+    int counter = 0;
+    for (iter1 = Table::tablesVector.begin(), end1 = Table::tablesVector.end(); iter1 != end1; ++iter1)
     {
-        String ^ tableName = toManaged(iter->getTableName());
+        String ^ tableName = toManaged(iter1->getTableName());
         std::string tableNameString = toUnmannged(button->Text);
         if (button->Text == tableName && Table::tempTableOrder.size() > 0)
         {
             for (iter2 = Table::tempTableOrder.begin(), end2 = Table::tempTableOrder.end(); iter2 != end2; ++iter2)
             {
-                iter->addOrder(iter2->first, iter2->second);
+                iter1->addOrder(iter2->first, iter2->second);
             }
+            button->BackColor = System::Drawing::Color::Red;
             Table::tempTableOrder.clear();
             orderLayoutPanel->Controls->Clear();
         }
         else if (button->Text == tableName && Table::tempTableOrder.size() == 0)
         {
-            std::vector<std::reference_wrapper<Label ^>> itemNameVector;
-            std::vector<std::reference_wrapper<Label ^>> itemPriceVector;
-
-            Label ^ nameLabel = gcnew Label();
-            Label ^ priceLabel = gcnew Label();
-            vector<std::reference_wrapper<Label ^>> labelsVector[1000];
-
-            vector<pair<string, int>> tableOrder = iter->getOrder();
+            vector<pair<string, int>> tableOrder = iter1->getOrder();
+            vector<std::reference_wrapper<Label ^>> nameLabelVector;
+            vector<std::reference_wrapper<Label ^>> priceLabelVector;
 
             for (iter3 = tableOrder.begin(), end3 = tableOrder.end(); iter3 != end3; ++iter3)
             {
+                Label ^ nameLabel = gcnew Label();
+                Label ^ priceLabel = gcnew Label();
+                nameLabelVector.push_back(nameLabel);
+                priceLabelVector.push_back(priceLabel);
                 String ^ itemName = toManaged(iter3->first);
-                nameLabel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(
+                nameLabelVector[counter].get()->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(
                     (((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom) |
                       System::Windows::Forms::AnchorStyles::Left) |
                      System::Windows::Forms::AnchorStyles::Right));
-                nameLabel->Font =
+                nameLabelVector[counter].get()->Font =
                     (gcnew System::Drawing::Font(L"Arial Narrow", 20.25F, System::Drawing::FontStyle::Bold,
                                                  System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-                nameLabel->ForeColor = System::Drawing::SystemColors::ButtonFace;
-                nameLabel->Size = System::Drawing::Size(140, 70);
-                nameLabel->TabIndex = 0;
-                nameLabel->Text = itemName;
-                nameLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+                nameLabelVector[counter].get()->ForeColor = System::Drawing::SystemColors::ButtonFace;
+                nameLabelVector[counter].get()->Size = System::Drawing::Size(140, 70);
+                nameLabelVector[counter].get()->TabIndex = 0;
+                nameLabelVector[counter].get()->Text = itemName;
+                nameLabelVector[counter].get()->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 
-                priceLabel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(
+                priceLabelVector[counter].get()->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(
                     (((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom) |
                       System::Windows::Forms::AnchorStyles::Left) |
                      System::Windows::Forms::AnchorStyles::Right));
-                priceLabel->Font =
+                priceLabelVector[counter].get()->Font =
                     (gcnew System::Drawing::Font(L"Arial Narrow", 20.25F, System::Drawing::FontStyle::Bold,
                                                  System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-                priceLabel->ForeColor = System::Drawing::SystemColors::ButtonFace;
-                priceLabel->Size = System::Drawing::Size(140, 70);
-                priceLabel->TabIndex = 0;
-                priceLabel->Text = Convert::ToString(iter3->second);
-                priceLabel->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-                itemNameVector.push_back(nameLabel);
-                itemPriceVector.push_back(priceLabel);
-            }
-            int itemNameVectorCounter = 0;
-            for (iter4 = itemNameVector.begin(), end4 = itemNameVector.end(); iter4 != end4; ++iter4)
-            {
-                tableOrderLayoutPanel->RowStyles->Add(
-                    (gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute, 40)));
-                tableOrderLayoutPanel->Controls->Add(*iter4, 0, itemNameVectorCounter++);
-                Label ^ testLabel = gcnew Label;
-                testLabel = iter4->get();
-                std::string dsdsa = toUnmannged(testLabel->Text);
-            }
-            int itemPriceVectorCounter = 0;
-            for (iter5 = itemNameVector.begin(), end5 = itemNameVector.end(); iter5 != end5; ++iter5)
-            {
-                tableOrderLayoutPanel->RowStyles->Add(
-                    (gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute, 40)));
-                tableOrderLayoutPanel->Controls->Add(*iter5, 1, itemPriceVectorCounter++);
+                priceLabelVector[counter].get()->ForeColor = System::Drawing::SystemColors::ButtonFace;
+                priceLabelVector[counter].get()->Size = System::Drawing::Size(140, 70);
+                priceLabelVector[counter].get()->TabIndex = 0;
+                priceLabelVector[counter].get()->Text = Convert::ToString(iter3->second);
+                priceLabelVector[counter].get()->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+                tableOrderLayoutPanel->Controls->Add(nameLabelVector[counter].get(), 0, counter);
+                tableOrderLayoutPanel->Controls->Add(priceLabelVector[counter].get(), 1, counter);
+                tableOrderTotalPrice->Text = Convert::ToString(iter1->getOrderSum());
+                counter++;
             }
         }
     }
@@ -2804,4 +2792,8 @@ System::Void RMSPOS::Main::clockOutbutton_Click(System::Object ^ sender, System:
             statusLabel->Text = "Failed to clock out. Please check your details are correct.";
         }
     }
+}
+
+System::Void RMSPOS::Main::tableOrderPayButton_Click(System::Object ^ sender, System::EventArgs ^ e)
+{
 }
